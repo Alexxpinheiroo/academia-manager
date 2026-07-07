@@ -1,16 +1,33 @@
-# React + Vite
+# Corpus Academia Manager 🏋️‍♂️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema de controle de acesso e gerenciamento de perfil de usuários desenvolvido como projeto prático para o curso de Análise e Desenvolvimento de Sistemas (ADS). A aplicação utiliza uma arquitetura baseada em React e integra serviços em nuvem do Firebase para autenticação segura e persistência de dados.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Autenticação de Usuários:** Fluxo completo de criação de contas e validação de credenciais (E-mail/Senha) via *Firebase Authentication*.
+* **Persistência no Banco de Dados:** Armazenamento e recuperação em tempo real de dados complementares do perfil do usuário (Nome, Sobrenome e Data de Nascimento) utilizando o banco de dados NoSQL *Cloud Firestore*.
+* **Rotas Protegidas:** Controle de navegação dinâmico via *React Router DOM*, impedindo o acesso à área restrita da aplicação por usuários não autenticados.
+* **Design Otimizado:** Interface responsiva e limpa, desenvolvida para garantir usabilidade tanto em navegadores desktop quanto em dispositivos móveis.
+* **Hospedagem em Produção:** Configuração de redirecionamento integrada para garantir a estabilidade das rotas de Single Page Application (SPA) no ambiente da *Vercel*.
 
-## React Compiler
+## 🛠️ Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** React (Vite), HTML5, CSS3
+* **Gerenciamento de Rotas:** React Router DOM
+* **Backend as a Service (BaaS):** Firebase (Authentication & Cloud Firestore)
+* **Hospedagem:** Vercel
 
-## Expanding the ESLint configuration
+## 📂 Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── assets/          # Imagens e recursos visuais
+│   ├── config/          # Configuração e inicialização do Firebase
+│   ├── pages/           # Telas da aplicação (Cadastro, Login, Principal)
+│   ├── routes/          # Gerenciamento de rotas públicas e protegidas
+│   ├── App.jsx          # Componente raiz
+│   └── main.jsx         # Ponto de entrada do React
+├── vercel.json          # Configuração de rewrites para a Vercel
+├── package.json         # Dependências e scripts do projeto
+└── vite.config.js       # Configuração do build do Vite
