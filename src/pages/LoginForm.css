@@ -1,0 +1,143 @@
+/* Card principal de Login com borda preta marcante */
+.login-wrapper {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  /* Adicionada a borda preta de 2px sólida idêntica aos inputs */
+  border: 2px solid #000000; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Campos de Input com borda preta mais marcada e profissional */
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  /* Alterado para uma borda preta sólida e nítida */
+  border: 2px solid #000000; 
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito de foco mantém a precisão e destaca ainda mais a borda */
+.input-field input:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+  outline: none;
+}
+
+/* Ajuste do botão com o emoji do olho */
+.password-container input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Botão de Acessar com borda marcante alinhada ao design */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #0066cc;
+  /* Borda escura para dar profundidade e destaque profissional */
+  border: 2px solid #004080; 
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  margin-top: 8px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #0052a3;
+  border-color: #003366;
+}
+
+.btn-submit:disabled {
+  background-color: #e0e0e0;
+  color: #757575;
+  border: 2px solid #cccccc;
+  cursor: not-allowed;
+}
+
+/* Label de Resultado da validação */
+.result-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.result-label.sucesso {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 2px solid #2e7d32; /* Borda marcada condizente com o novo padrão */
+}
+
+.result-label.erro {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 2px solid #c62828; /* Borda marcada condizente com o novo padrão */
+}
+
+.feedback-emoji {
+  margin-right: 6px;
+  font-size: 16px;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
